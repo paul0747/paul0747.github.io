@@ -6,13 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Great Shoes inc.</title>
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
+    <!-- BUTTON TO TOP -->
+    <div>
+      <button id="btnScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+      </button>
+    </div>
+    <!-- BUTTON TO TOP -->
     <header class="hero">
       <div class="container spacing">
         <h1 class="primary-title">Magazin online de incaltaminte</h1>
@@ -84,5 +96,17 @@
         </div>
       </section>
     </main>
+    <script>
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+      btnScrollToTop.addEventListener("click", function () {
+        //window.scrollTo(0, 0);
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
