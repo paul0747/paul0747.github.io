@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+section {
+  padding: 2em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.5em 1.25em;
+  background: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear,
+    -webkit-transform 250ms ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.product {
+  background: radial-gradient(
+    var(--clr-inner, limegreen),
+    var(--clr-outer, purple)
+  );
+  padding: 5em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+.product__title {
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+}
+.product__image {
+  margin: -5em 0 0 0;
+}
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
+  .product__title {
+    margin: 0;
+  }
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/shoe-3.png);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+  .product.shoe-left .product__image {
+    float: left;
+    shape-outside: url(../img/shoe-2.png);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
+  }
+}
+.shoe-vans {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+/* .shoe-red {
+  --clr-inner: #e8622c;
+  --clr-outer: #e8432c;
+  --clr-accent: #e87c2c;
+} */
